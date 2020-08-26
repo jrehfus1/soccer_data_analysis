@@ -1,0 +1,381 @@
+match week,date,home team name,away team name,home final score,away final score,home goal times,away goal times
+1,140816,Manchester United,Swansea City,1,2,['53'],"['28', '72']"
+1,140816,Leicester City,Everton FC,2,2,"['22', '86']","['20', '45']"
+1,140816,Queens Park Rangers,Hull City,0,1,[],['52']
+1,140816,Stoke City,Aston Villa,0,1,[],['50']
+1,140816,West Bromwich Albion,Sunderland AFC,2,2,"['42', '74']","['5', '85']"
+1,140816,West Ham United,Tottenham Hotspur,0,1,[],['90']
+1,140816,Arsenal FC,Crystal Palace,2,1,"['45', '90']",['35']
+1,140817,Liverpool FC,Southampton FC,2,1,"['23', '79']",['56']
+1,140817,Newcastle United,Manchester City,0,2,[],"['38', '90']"
+1,140818,Burnley FC,Chelsea FC,1,3,['14'],"['17', '21', '34']"
+2,140823,Aston Villa,Newcastle United,0,0,[],[]
+2,140823,Chelsea FC,Leicester City,2,0,"['63', '77']",[]
+2,140823,Crystal Palace,West Ham United,1,3,['48'],"['34', '37', '62']"
+2,140823,Southampton FC,West Bromwich Albion,0,0,[],[]
+2,140823,Swansea City,Burnley FC,1,0,['23'],[]
+2,140823,Everton FC,Arsenal FC,2,2,"['19', '45']","['83', '90']"
+2,140824,Hull City,Stoke City,1,1,['42'],['83']
+2,140824,Tottenham Hotspur,Queens Park Rangers,4,0,"['12', '30', '37', '65']",[]
+2,140824,Sunderland AFC,Manchester United,1,1,['30'],['16']
+2,140825,Manchester City,Liverpool FC,3,1,"['41', '55', '69']",['83']
+3,140830,Burnley FC,Manchester United,0,0,[],[]
+3,140830,Manchester City,Stoke City,0,1,[],['58']
+3,140830,Newcastle United,Crystal Palace,3,3,"['37', '73', '88']","['1', '48', '90']"
+3,140830,Queens Park Rangers,Sunderland AFC,1,0,['45'],[]
+3,140830,Swansea City,West Bromwich Albion,3,0,"['2', '24', '71']",[]
+3,140830,West Ham United,Southampton FC,1,3,['27'],"['45', '68', '83']"
+3,140830,Everton FC,Chelsea FC,3,6,"['45', '69', '76']","['1', '3', '67', '74', '77', '90']"
+3,140831,Aston Villa,Hull City,2,1,"['14', '36']",['74']
+3,140831,Tottenham Hotspur,Liverpool FC,0,3,[],"['8', '49', '60']"
+3,140831,Leicester City,Arsenal FC,1,1,['22'],['20']
+4,140913,Arsenal FC,Manchester City,2,2,"['63', '74']","['28', '83']"
+4,140913,Chelsea FC,Swansea City,4,2,"['45', '56', '67', '81']","['11', '86']"
+4,140913,Crystal Palace,Burnley FC,0,0,[],[]
+4,140913,Southampton FC,Newcastle United,4,0,"['6', '19', '54', '90']",[]
+4,140913,Stoke City,Leicester City,0,1,[],['64']
+4,140913,Sunderland AFC,Tottenham Hotspur,2,2,"['4', '82']","['2', '48']"
+4,140913,West Bromwich Albion,Everton FC,0,2,[],"['2', '66']"
+4,140913,Liverpool FC,Aston Villa,0,1,[],['9']
+4,140914,Manchester United,Queens Park Rangers,4,0,"['24', '36', '44', '58']",[]
+4,140915,Hull City,West Ham United,2,2,"['39', '64']","['50', '67']"
+5,140920,Queens Park Rangers,Stoke City,2,2,"['42', '88']","['11', '51']"
+5,140920,Aston Villa,Arsenal FC,0,3,[],"['32', '34', '36']"
+5,140920,Burnley FC,Sunderland AFC,0,0,[],[]
+5,140920,Newcastle United,Hull City,2,2,"['73', '87']","['48', '68']"
+5,140920,Swansea City,Southampton FC,0,1,[],['80']
+5,140920,West Ham United,Liverpool FC,3,1,"['2', '7', '88']",['26']
+5,140921,Leicester City,Manchester United,5,3,"['18', '62', '64', '79', '84']","['13', '17', '57']"
+5,140921,Tottenham Hotspur,West Bromwich Albion,0,1,[],['74']
+5,140921,Everton FC,Crystal Palace,2,3,"['9', '83']","['30', '54', '69']"
+5,140921,Manchester City,Chelsea FC,1,1,['85'],['71']
+6,140927,Liverpool FC,Everton FC,1,1,['65'],['90']
+6,140927,Chelsea FC,Aston Villa,3,0,"['7', '59', '79']",[]
+6,140927,Crystal Palace,Leicester City,2,0,"['51', '54']",[]
+6,140927,Hull City,Manchester City,2,4,"['21', '32']","['7', '11', '68', '87']"
+6,140927,Manchester United,West Ham United,2,1,"['5', '22']",['37']
+6,140927,Southampton FC,Queens Park Rangers,2,1,"['54', '68']",['66']
+6,140927,Sunderland AFC,Swansea City,0,0,[],[]
+6,140927,Arsenal FC,Tottenham Hotspur,1,1,['74'],['56']
+6,140928,West Bromwich Albion,Burnley FC,4,0,"['30', '45', '56', '90']",[]
+6,140929,Stoke City,Newcastle United,1,0,['15'],[]
+7,141004,Hull City,Crystal Palace,2,0,"['60', '89']",[]
+7,141004,Leicester City,Burnley FC,2,2,"['33', '40']","['39', '90']"
+7,141004,Liverpool FC,West Bromwich Albion,2,1,"['45', '61']",['56']
+7,141004,Sunderland AFC,Stoke City,3,1,"['4', '23', '79']",['15']
+7,141004,Swansea City,Newcastle United,2,2,"['17', '50']","['43', '75']"
+7,141004,Aston Villa,Manchester City,0,2,[],"['82', '88']"
+7,141005,Manchester United,Everton FC,2,1,"['27', '62']",['55']
+7,141005,Tottenham Hotspur,Southampton FC,1,0,['40'],[]
+7,141005,Chelsea FC,Arsenal FC,2,0,"['27', '78']",[]
+7,141005,West Ham United,Queens Park Rangers,2,0,"['5', '59']",[]
+8,141018,Manchester City,Tottenham Hotspur,4,1,"['13', '20', '68', '75']",['15']
+8,141018,Arsenal FC,Hull City,2,2,"['13', '90']","['17', '46']"
+8,141018,Burnley FC,West Ham United,1,3,['60'],"['49', '54', '70']"
+8,141018,Crystal Palace,Chelsea FC,1,2,['90'],"['6', '51']"
+8,141018,Everton FC,Aston Villa,3,0,"['18', '48', '76']",[]
+8,141018,Southampton FC,Sunderland AFC,8,0,"['12', '18', '37', '63', '69', '78', '79', '86']",[]
+8,141018,Newcastle United,Leicester City,1,0,['71'],[]
+8,141019,Queens Park Rangers,Liverpool FC,2,3,"['87', '90']","['67', '90', '90']"
+8,141019,Stoke City,Swansea City,2,1,"['43', '76']",['34']
+8,141020,West Bromwich Albion,Manchester United,2,2,"['8', '66']","['48', '87']"
+9,141025,West Ham United,Manchester City,2,1,"['21', '75']",['77']
+9,141025,Liverpool FC,Hull City,0,0,[],[]
+9,141025,Southampton FC,Stoke City,1,0,['33'],[]
+9,141025,Sunderland AFC,Arsenal FC,0,2,[],"['30', '90']"
+9,141025,West Bromwich Albion,Crystal Palace,2,2,"['51', '90']","['16', '45']"
+9,141025,Swansea City,Leicester City,2,0,"['34', '57']",[]
+9,141026,Burnley FC,Everton FC,1,3,['20'],"['4', '29', '86']"
+9,141026,Tottenham Hotspur,Newcastle United,1,2,['18'],"['46', '58']"
+9,141026,Manchester United,Chelsea FC,1,1,['90'],['53']
+9,141027,Queens Park Rangers,Aston Villa,2,0,"['17', '69']",[]
+10,141101,Newcastle United,Liverpool FC,1,0,['73'],[]
+10,141101,Arsenal FC,Burnley FC,3,0,"['70', '72', '90']",[]
+10,141101,Chelsea FC,Queens Park Rangers,2,1,"['32', '75']",['62']
+10,141101,Everton FC,Swansea City,0,0,[],[]
+10,141101,Hull City,Southampton FC,0,1,[],['3']
+10,141101,Leicester City,West Bromwich Albion,0,1,[],['47']
+10,141101,Stoke City,West Ham United,2,2,"['33', '56']","['60', '73']"
+10,141102,Manchester City,Manchester United,1,0,['63'],[]
+10,141102,Aston Villa,Tottenham Hotspur,1,2,['16'],"['84', '90']"
+10,141103,Crystal Palace,Sunderland AFC,1,3,['55'],"['31', '79', '90']"
+11,141108,Liverpool FC,Chelsea FC,1,2,['9'],"['14', '67']"
+11,141108,Burnley FC,Hull City,1,0,['50'],[]
+11,141108,Manchester United,Crystal Palace,1,0,['67'],[]
+11,141108,Southampton FC,Leicester City,2,0,"['75', '80']",[]
+11,141108,West Ham United,Aston Villa,0,0,[],[]
+11,141108,Queens Park Rangers,Manchester City,2,2,"['21', '76']","['32', '83']"
+11,141109,Sunderland AFC,Everton FC,1,1,['67'],['76']
+11,141109,Tottenham Hotspur,Stoke City,1,2,['77'],"['6', '33']"
+11,141109,West Bromwich Albion,Newcastle United,0,2,[],"['45', '62']"
+11,141109,Swansea City,Arsenal FC,2,1,"['75', '78']",['63']
+12,141122,Chelsea FC,West Bromwich Albion,2,0,"['11', '25']",[]
+12,141122,Everton FC,West Ham United,2,1,"['26', '73']",['56']
+12,141122,Leicester City,Sunderland AFC,0,0,[],[]
+12,141122,Manchester City,Swansea City,2,1,"['19', '62']",['9']
+12,141122,Newcastle United,Queens Park Rangers,1,0,['78'],[]
+12,141122,Stoke City,Burnley FC,1,2,['32'],"['12', '13']"
+12,141122,Arsenal FC,Manchester United,1,2,['90'],"['56', '85']"
+12,141123,Crystal Palace,Liverpool FC,3,1,"['17', '78', '81']",['2']
+12,141123,Hull City,Tottenham Hotspur,1,2,['8'],"['61', '90']"
+12,141124,Aston Villa,Southampton FC,1,1,['29'],['81']
+13,141129,West Bromwich Albion,Arsenal FC,0,1,[],['60']
+13,141129,Burnley FC,Aston Villa,1,1,['87'],['38']
+13,141129,Liverpool FC,Stoke City,1,0,['85'],[]
+13,141129,Manchester United,Hull City,3,0,"['16', '42', '66']",[]
+13,141129,Queens Park Rangers,Leicester City,3,2,"['37', '45', '73']","['4', '67']"
+13,141129,Swansea City,Crystal Palace,1,1,['15'],['25']
+13,141129,West Ham United,Newcastle United,1,0,['56'],[]
+13,141129,Sunderland AFC,Chelsea FC,0,0,[],[]
+13,141130,Southampton FC,Manchester City,0,3,[],"['51', '80', '88']"
+13,141130,Tottenham Hotspur,Everton FC,2,1,"['21', '45']",['15']
+14,141202,Burnley FC,Newcastle United,1,1,['34'],['48']
+14,141202,Leicester City,Liverpool FC,1,3,['22'],"['26', '54', '83']"
+14,141202,Manchester United,Stoke City,2,1,"['21', '59']",['39']
+14,141202,Swansea City,Queens Park Rangers,2,0,"['78', '83']",[]
+14,141202,Crystal Palace,Aston Villa,0,1,[],['32']
+14,141202,West Bromwich Albion,West Ham United,1,2,['10'],"['35', '45']"
+14,141203,Arsenal FC,Southampton FC,1,0,['88'],[]
+14,141203,Chelsea FC,Tottenham Hotspur,3,0,"['19', '22', '73']",[]
+14,141203,Everton FC,Hull City,1,1,['34'],['59']
+14,141203,Sunderland AFC,Manchester City,1,4,['19'],"['21', '39', '55', '71']"
+15,141206,Newcastle United,Chelsea FC,2,1,"['57', '78']",['83']
+15,141206,Hull City,West Bromwich Albion,0,0,[],[]
+15,141206,Liverpool FC,Sunderland AFC,0,0,[],[]
+15,141206,Queens Park Rangers,Burnley FC,2,0,"['51', '74']",[]
+15,141206,Stoke City,Arsenal FC,3,2,"['1', '35', '45']","['68', '70']"
+15,141206,Tottenham Hotspur,Crystal Palace,0,0,[],[]
+15,141206,Manchester City,Everton FC,1,0,['24'],[]
+15,141207,West Ham United,Swansea City,3,1,"['41', '66', '87']",['19']
+15,141207,Aston Villa,Leicester City,2,1,"['17', '71']",['13']
+15,141208,Southampton FC,Manchester United,1,2,['31'],"['12', '71']"
+16,141213,Burnley FC,Southampton FC,1,0,['73'],[]
+16,141213,Chelsea FC,Hull City,2,0,"['7', '68']",[]
+16,141213,Crystal Palace,Stoke City,1,1,['11'],['13']
+16,141213,Leicester City,Manchester City,0,1,[],['40']
+16,141213,Sunderland AFC,West Ham United,1,1,['22'],['29']
+16,141213,West Bromwich Albion,Aston Villa,1,0,['72'],[]
+16,141213,Arsenal FC,Newcastle United,4,1,"['15', '54', '58', '89']",['63']
+16,141214,Manchester United,Liverpool FC,3,0,"['12', '40', '71']",[]
+16,141214,Swansea City,Tottenham Hotspur,1,2,['48'],"['4', '89']"
+16,141215,Everton FC,Queens Park Rangers,3,1,"['33', '43', '53']",['80']
+17,141220,Manchester City,Crystal Palace,3,0,"['49', '61', '81']",[]
+17,141220,Aston Villa,Manchester United,1,1,['18'],['53']
+17,141220,Hull City,Swansea City,0,1,[],['15']
+17,141220,Queens Park Rangers,West Bromwich Albion,3,2,"['24', '48', '86']","['10', '20']"
+17,141220,Southampton FC,Everton FC,3,0,"['38', '65', '82']",[]
+17,141220,Tottenham Hotspur,Burnley FC,2,1,"['21', '35']",['27']
+17,141220,West Ham United,Leicester City,2,0,"['24', '56']",[]
+17,141221,Newcastle United,Sunderland AFC,0,1,[],['90']
+17,141221,Liverpool FC,Arsenal FC,2,2,"['45', '90']","['45', '65']"
+17,141222,Stoke City,Chelsea FC,0,2,[],"['2', '78']"
+18,141226,Chelsea FC,West Ham United,2,0,"['31', '62']",[]
+18,141226,Burnley FC,Liverpool FC,0,1,[],['62']
+18,141226,Crystal Palace,Southampton FC,1,3,['86'],"['17', '48', '53']"
+18,141226,Everton FC,Stoke City,0,1,[],['38']
+18,141226,Leicester City,Tottenham Hotspur,1,2,['48'],"['1', '71']"
+18,141226,Manchester United,Newcastle United,3,1,"['23', '36', '53']",['87']
+18,141226,Sunderland AFC,Hull City,1,3,['1'],"['32', '51', '90']"
+18,141226,Swansea City,Aston Villa,1,0,['13'],[]
+18,141226,West Bromwich Albion,Manchester City,1,3,['87'],"['8', '13', '34']"
+18,141226,Arsenal FC,Queens Park Rangers,2,1,"['37', '65']",['79']
+19,141228,Tottenham Hotspur,Manchester United,0,0,[],[]
+19,141228,Southampton FC,Chelsea FC,1,1,['17'],['45']
+19,141228,Aston Villa,Sunderland AFC,0,0,[],[]
+19,141228,Hull City,Leicester City,0,1,[],['32']
+19,141228,Manchester City,Burnley FC,2,2,"['23', '33']","['47', '81']"
+19,141228,Queens Park Rangers,Crystal Palace,0,0,[],[]
+19,141228,Stoke City,West Bromwich Albion,2,0,"['51', '66']",[]
+19,141228,West Ham United,Arsenal FC,1,2,['54'],"['41', '44']"
+19,141228,Newcastle United,Everton FC,3,2,"['34', '51', '68']","['5', '84']"
+19,141229,Liverpool FC,Swansea City,4,1,"['33', '51', '61', '69']",['52']
+20,150101,Stoke City,Manchester United,1,1,['2'],['26']
+20,150101,Aston Villa,Crystal Palace,0,0,[],[]
+20,150101,Hull City,Everton FC,2,0,"['33', '43']",[]
+20,150101,Liverpool FC,Leicester City,2,2,"['17', '40']","['58', '60']"
+20,150101,Manchester City,Sunderland AFC,3,2,"['57', '66', '73']","['68', '71']"
+20,150101,Newcastle United,Burnley FC,3,3,"['15', '26', '78']","['19', '66', '86']"
+20,150101,Queens Park Rangers,Swansea City,1,1,['20'],['90']
+20,150101,Southampton FC,Arsenal FC,2,0,"['34', '56']",[]
+20,150101,West Ham United,West Bromwich Albion,1,1,['10'],['42']
+20,150101,Tottenham Hotspur,Chelsea FC,5,3,"['30', '44', '45', '52', '78']","['18', '61', '87']"
+21,150110,Sunderland AFC,Liverpool FC,0,1,[],['8']
+21,150110,Burnley FC,Queens Park Rangers,2,1,"['12', '37']",['33']
+21,150110,Chelsea FC,Newcastle United,2,0,"['43', '59']",[]
+21,150110,Everton FC,Manchester City,1,1,['78'],['74']
+21,150110,Leicester City,Aston Villa,1,0,['45'],[]
+21,150110,Swansea City,West Ham United,1,1,['74'],['43']
+21,150110,West Bromwich Albion,Hull City,1,0,['78'],[]
+21,150110,Crystal Palace,Tottenham Hotspur,2,1,"['69', '80']",['49']
+21,150111,Arsenal FC,Stoke City,3,0,"['6', '33', '49']",[]
+21,150111,Manchester United,Southampton FC,0,1,[],['69']
+22,150117,Aston Villa,Liverpool FC,0,2,[],"['24', '79']"
+22,150117,Burnley FC,Crystal Palace,2,3,"['12', '16']","['28', '48', '87']"
+22,150117,Leicester City,Stoke City,0,1,[],['63']
+22,150117,Queens Park Rangers,Manchester United,0,2,[],"['58', '90']"
+22,150117,Swansea City,Chelsea FC,0,5,[],"['1', '20', '34', '36', '79']"
+22,150117,Tottenham Hotspur,Sunderland AFC,2,1,"['3', '88']",['31']
+22,150117,Newcastle United,Southampton FC,1,2,['29'],"['14', '62']"
+22,150118,West Ham United,Hull City,3,0,"['49', '69', '72']",[]
+22,150118,Manchester City,Arsenal FC,0,2,[],"['24', '67']"
+22,150119,Everton FC,West Bromwich Albion,0,0,[],[]
+23,150131,Hull City,Newcastle United,0,3,[],"['40', '50', '78']"
+23,150131,Crystal Palace,Everton FC,0,1,[],['2']
+23,150131,Liverpool FC,West Ham United,2,0,"['51', '80']",[]
+23,150131,Manchester United,Leicester City,3,1,"['27', '32', '44']",['80']
+23,150131,Stoke City,Queens Park Rangers,3,1,"['21', '34', '90']",['36']
+23,150131,Sunderland AFC,Burnley FC,2,0,"['20', '34']",[]
+23,150131,West Bromwich Albion,Tottenham Hotspur,0,3,[],"['6', '15', '64']"
+23,150131,Chelsea FC,Manchester City,1,1,['41'],['45']
+23,150201,Arsenal FC,Aston Villa,5,0,"['8', '56', '63', '75', '90']",[]
+23,150201,Southampton FC,Swansea City,0,1,[],['83']
+24,150207,Tottenham Hotspur,Arsenal FC,2,1,"['56', '86']",['11']
+24,150207,Aston Villa,Chelsea FC,1,2,['48'],"['8', '66']"
+24,150207,Leicester City,Crystal Palace,0,1,[],['55']
+24,150207,Manchester City,Hull City,1,1,['90'],['35']
+24,150207,Queens Park Rangers,Southampton FC,0,1,[],['90']
+24,150207,Swansea City,Sunderland AFC,1,1,['66'],['42']
+24,150207,Everton FC,Liverpool FC,0,0,[],[]
+24,150208,Burnley FC,West Bromwich Albion,2,2,"['11', '32']","['45', '67']"
+24,150208,Newcastle United,Stoke City,1,1,['74'],['90']
+24,150208,West Ham United,Manchester United,1,1,['49'],['90']
+25,150210,Arsenal FC,Leicester City,2,1,"['27', '41']",['61']
+25,150210,Hull City,Aston Villa,2,0,"['22', '74']",[]
+25,150210,Sunderland AFC,Queens Park Rangers,0,2,[],"['17', '45']"
+25,150210,Liverpool FC,Tottenham Hotspur,3,2,"['15', '53', '83']","['26', '61']"
+25,150211,Manchester United,Burnley FC,3,1,"['6', '45', '82']",['12']
+25,150211,Southampton FC,West Ham United,0,0,[],[]
+25,150211,Chelsea FC,Everton FC,1,0,['89'],[]
+25,150211,Stoke City,Manchester City,1,4,['38'],"['33', '55', '70', '76']"
+25,150211,Crystal Palace,Newcastle United,1,1,['71'],['42']
+25,150211,West Bromwich Albion,Swansea City,2,0,"['60', '74']",[]
+26,150221,Aston Villa,Stoke City,1,2,['20'],"['45', '90']"
+26,150221,Chelsea FC,Burnley FC,1,1,['14'],['81']
+26,150221,Crystal Palace,Arsenal FC,1,2,['90'],"['8', '45']"
+26,150221,Hull City,Queens Park Rangers,2,1,"['16', '89']",['39']
+26,150221,Sunderland AFC,West Bromwich Albion,0,0,[],[]
+26,150221,Swansea City,Manchester United,2,1,"['30', '73']",['28']
+26,150221,Manchester City,Newcastle United,5,0,"['2', '12', '21', '51', '53']",[]
+26,150222,Tottenham Hotspur,West Ham United,2,2,"['81', '90']","['22', '62']"
+26,150222,Everton FC,Leicester City,2,2,"['57', '88']","['63', '70']"
+26,150222,Southampton FC,Liverpool FC,0,2,[],"['3', '73']"
+27,150228,West Ham United,Crystal Palace,1,3,['76'],"['41', '51', '63']"
+27,150228,Burnley FC,Swansea City,0,1,[],['64']
+27,150228,Manchester United,Sunderland AFC,2,0,"['66', '84']",[]
+27,150228,Newcastle United,Aston Villa,1,0,['37'],[]
+27,150228,Stoke City,Hull City,1,0,['71'],[]
+27,150228,West Bromwich Albion,Southampton FC,1,0,['2'],[]
+27,150301,Liverpool FC,Manchester City,2,1,"['11', '75']",['25']
+27,150301,Arsenal FC,Everton FC,2,0,"['39', '89']",[]
+27,150307,Queens Park Rangers,Tottenham Hotspur,1,2,['75'],"['34', '68']"
+27,150429,Leicester City,Chelsea FC,1,3,['45'],"['48', '79', '83']"
+28,150303,Aston Villa,West Bromwich Albion,2,1,"['22', '90']",['66']
+28,150303,Hull City,Sunderland AFC,1,1,['15'],['77']
+28,150303,Southampton FC,Crystal Palace,1,0,['83'],[]
+28,150304,Queens Park Rangers,Arsenal FC,1,2,['82'],"['64', '69']"
+28,150304,West Ham United,Chelsea FC,0,1,[],['22']
+28,150304,Manchester City,Leicester City,2,0,"['45', '88']",[]
+28,150304,Newcastle United,Manchester United,0,1,[],['89']
+28,150304,Stoke City,Everton FC,2,0,"['32', '84']",[]
+28,150304,Tottenham Hotspur,Swansea City,3,2,"['7', '51', '60']","['19', '89']"
+28,150304,Liverpool FC,Burnley FC,2,0,"['29', '51']",[]
+29,150314,Crystal Palace,Queens Park Rangers,3,1,"['21', '40', '42']",['83']
+29,150314,Arsenal FC,West Ham United,3,0,"['45', '81', '84']",[]
+29,150314,Leicester City,Hull City,0,0,[],[]
+29,150314,Sunderland AFC,Aston Villa,0,4,[],"['16', '18', '37', '44']"
+29,150314,West Bromwich Albion,Stoke City,1,0,['19'],[]
+29,150314,Burnley FC,Manchester City,1,0,['61'],[]
+29,150315,Chelsea FC,Southampton FC,1,1,['11'],['19']
+29,150315,Everton FC,Newcastle United,3,0,"['20', '56', '90']",[]
+29,150315,Manchester United,Tottenham Hotspur,3,0,"['9', '19', '34']",[]
+29,150316,Swansea City,Liverpool FC,0,1,[],['68']
+30,150321,Manchester City,West Bromwich Albion,3,0,"['27', '40', '77']",[]
+30,150321,Aston Villa,Swansea City,0,1,[],['87']
+30,150321,Newcastle United,Arsenal FC,1,2,['48'],"['24', '28']"
+30,150321,Southampton FC,Burnley FC,2,0,"['37', '58']",[]
+30,150321,Stoke City,Crystal Palace,1,2,['14'],"['41', '45']"
+30,150321,Tottenham Hotspur,Leicester City,4,3,"['6', '13', '64', '85']","['38', '50', '90']"
+30,150321,West Ham United,Sunderland AFC,1,0,['88'],[]
+30,150322,Liverpool FC,Manchester United,1,2,['69'],"['14', '59']"
+30,150322,Hull City,Chelsea FC,2,3,"['26', '28']","['2', '9', '77']"
+30,150322,Queens Park Rangers,Everton FC,1,2,['65'],"['18', '77']"
+31,150404,Arsenal FC,Liverpool FC,4,1,"['37', '40', '45', '90']",['76']
+31,150404,Everton FC,Southampton FC,1,0,['16'],[]
+31,150404,Leicester City,West Ham United,2,1,"['12', '86']",['32']
+31,150404,Manchester United,Aston Villa,3,1,"['43', '79', '90']",['80']
+31,150404,Swansea City,Hull City,3,1,"['18', '37', '90']",['50']
+31,150404,West Bromwich Albion,Queens Park Rangers,1,4,['58'],"['15', '37', '43', '90']"
+31,150404,Chelsea FC,Stoke City,2,1,"['39', '62']",['44']
+31,150405,Burnley FC,Tottenham Hotspur,0,0,[],[]
+31,150405,Sunderland AFC,Newcastle United,1,0,['45'],[]
+31,150406,Crystal Palace,Manchester City,2,1,"['34', '48']",['78']
+32,150411,Swansea City,Everton FC,1,1,['69'],['41']
+32,150411,Southampton FC,Hull City,2,0,"['56', '81']",[]
+32,150411,Sunderland AFC,Crystal Palace,1,4,['90'],"['48', '51', '53', '62']"
+32,150411,Tottenham Hotspur,Aston Villa,0,1,[],['35']
+32,150411,West Bromwich Albion,Leicester City,2,3,"['8', '26']","['20', '80', '90']"
+32,150411,West Ham United,Stoke City,1,1,['7'],['90']
+32,150411,Burnley FC,Arsenal FC,0,1,[],['12']
+32,150412,Queens Park Rangers,Chelsea FC,0,1,[],['88']
+32,150412,Manchester United,Manchester City,4,2,"['14', '27', '67', '73']","['8', '89']"
+32,150413,Liverpool FC,Newcastle United,2,0,"['9', '70']",[]
+33,150407,Aston Villa,Queens Park Rangers,3,3,"['10', '33', '83']","['7', '55', '78']"
+33,150418,Crystal Palace,West Bromwich Albion,0,2,[],"['2', '53']"
+33,150418,Everton FC,Burnley FC,1,0,['29'],[]
+33,150418,Leicester City,Swansea City,2,0,"['15', '89']",[]
+33,150418,Stoke City,Southampton FC,2,1,"['47', '84']",['22']
+33,150418,Chelsea FC,Manchester United,1,0,['38'],[]
+33,150419,Manchester City,West Ham United,2,0,"['18', '36']",[]
+33,150419,Newcastle United,Tottenham Hotspur,1,3,['46'],"['30', '53', '90']"
+33,150428,Hull City,Liverpool FC,1,0,['37'],[]
+33,150520,Arsenal FC,Sunderland AFC,0,0,[],[]
+34,150425,Southampton FC,Tottenham Hotspur,2,2,"['29', '65']","['43', '70']"
+34,150425,Burnley FC,Leicester City,0,1,[],['60']
+34,150425,Crystal Palace,Hull City,0,2,[],"['51', '90']"
+34,150425,Newcastle United,Swansea City,2,3,"['20', '87']","['45', '49', '71']"
+34,150425,Queens Park Rangers,West Ham United,0,0,[],[]
+34,150425,Stoke City,Sunderland AFC,1,1,['27'],['1']
+34,150425,West Bromwich Albion,Liverpool FC,0,0,[],[]
+34,150425,Manchester City,Aston Villa,3,2,"['3', '66', '89']","['68', '85']"
+34,150426,Everton FC,Manchester United,3,0,"['5', '35', '74']",[]
+34,150426,Arsenal FC,Chelsea FC,0,0,[],[]
+35,150502,Leicester City,Newcastle United,3,0,"['1', '17', '48']",[]
+35,150502,Aston Villa,Everton FC,3,2,"['10', '45', '64']","['59', '90']"
+35,150502,Liverpool FC,Queens Park Rangers,2,1,"['19', '87']",['73']
+35,150502,Sunderland AFC,Southampton FC,2,1,"['21', '55']",['22']
+35,150502,Swansea City,Stoke City,2,0,"['76', '90']",[]
+35,150502,West Ham United,Burnley FC,1,0,['24'],[]
+35,150502,Manchester United,West Bromwich Albion,0,1,[],['63']
+35,150503,Chelsea FC,Crystal Palace,1,0,['45'],[]
+35,150503,Tottenham Hotspur,Manchester City,0,1,[],['29']
+35,150504,Hull City,Arsenal FC,1,3,['57'],"['29', '33', '45']"
+36,150509,Everton FC,Sunderland AFC,0,2,[],"['53', '85']"
+36,150509,Aston Villa,West Ham United,1,0,['31'],[]
+36,150509,Hull City,Burnley FC,0,1,[],['62']
+36,150509,Leicester City,Southampton FC,2,0,"['7', '19']",[]
+36,150509,Newcastle United,West Bromwich Albion,1,1,['41'],['32']
+36,150509,Stoke City,Tottenham Hotspur,3,0,"['21', '32', '86']",[]
+36,150509,Crystal Palace,Manchester United,1,2,['57'],"['19', '78']"
+36,150510,Manchester City,Queens Park Rangers,6,0,"['4', '32', '50', '65', '70', '87']",[]
+36,150510,Chelsea FC,Liverpool FC,1,1,['5'],['44']
+36,150511,Arsenal FC,Swansea City,0,1,[],['85']
+37,150516,Southampton FC,Aston Villa,6,1,"['13', '14', '16', '26', '38', '81']",['45']
+37,150516,Burnley FC,Stoke City,0,0,[],[]
+37,150516,Queens Park Rangers,Newcastle United,2,1,"['54', '61']",['24']
+37,150516,Sunderland AFC,Leicester City,0,0,[],[]
+37,150516,Tottenham Hotspur,Hull City,2,0,"['54', '61']",[]
+37,150516,West Ham United,Everton FC,1,2,['62'],"['68', '90']"
+37,150516,Liverpool FC,Crystal Palace,1,3,['26'],"['43', '60', '90']"
+37,150517,Swansea City,Manchester City,2,4,"['45', '64']","['21', '36', '74', '90']"
+37,150517,Manchester United,Arsenal FC,1,1,['30'],['82']
+37,150518,West Bromwich Albion,Chelsea FC,3,0,"['9', '47', '60']",[]
+38,150524,Arsenal FC,West Bromwich Albion,4,1,"['4', '14', '17', '37']",['57']
+38,150524,Aston Villa,Burnley FC,0,1,[],['6']
+38,150524,Chelsea FC,Sunderland AFC,3,1,"['37', '70', '88']",['26']
+38,150524,Crystal Palace,Swansea City,1,0,['57'],[]
+38,150524,Everton FC,Tottenham Hotspur,0,1,[],['24']
+38,150524,Hull City,Manchester United,0,0,[],[]
+38,150524,Leicester City,Queens Park Rangers,5,1,"['16', '43', '51', '52', '86']",['57']
+38,150524,Manchester City,Southampton FC,2,0,"['31', '88']",[]
+38,150524,Newcastle United,West Ham United,2,0,"['54', '85']",[]
+38,150524,Stoke City,Liverpool FC,6,1,"['22', '26', '30', '41', '45', '86']",['70']

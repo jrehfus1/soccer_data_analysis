@@ -1,7 +1,13 @@
 # soccer_data_analysis
 What can we learn about the beautiful game from data?
 
-The following scripts are for data cleaning, processing, and visualization.
+Data source: www.worldfootball.net
+The data have been compiled in CSV files.
+Each CSV file contains the scores from all matches in a single Premier League season.
+The columns in the CSV files are:
+match week, date, home team name, away team name, home final score, away final score, home goal times, away goal times
+
+The following scripts are for data cleaning, processing, visualization, and analysis.
 
 plot_league_goals.py
 This script is useful for analyzing the goals scored in each game of a given season.
@@ -27,3 +33,5 @@ This script will plot:
 
 In addition:
 1) TODO fit the league positions switch data to a __ model
+
+A discussion of the results of these analyses is presented in the "REPORT.pdf" file.

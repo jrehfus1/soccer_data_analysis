@@ -1,3 +1,5 @@
 __pycache__
 *parsing.py
 .Rhistory
+.DS_Store
+*.docx
