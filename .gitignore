@@ -3,3 +3,7 @@ __pycache__
 .Rhistory
 .DS_Store
 *.docx
+*_PL_goal_difference_per_match.pdf
+*_PL_goals_per_match.pdf
+*_PL_goal_times.pdf
+plot_league_goals_v2.py
