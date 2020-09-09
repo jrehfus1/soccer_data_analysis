@@ -1,4 +1,4 @@
-#this code plots a histogram of the goals scored in a PL season as a funciton of game minute
+#this code plots histograms of the goals scored in a PL season as a funciton of game minute, total goals scored per match, and goal difference per match
 
 import matplotlib
 import matplotlib.pyplot as plt
@@ -8,7 +8,7 @@ import pandas as pd
 from scipy import stats
 
 ##### decide whether or not to save the figure that this script produces #####
-save_fig = 1
+save_figs = 0
 
 ##### read in the data file containing the goals data from the season of choice #####
 #season_span = '19_20'
@@ -41,7 +41,7 @@ goal_times_bin_settings = range(1,92)
 
 avg_goals_per_minute = (sum(goal_times_bin_counts[0:44]) + sum(goal_times_bin_counts[45:89])) / (len(goal_times_bin_counts[0:44]) + len(goal_times_bin_counts[45:89])) #calculate the average number of goals scored throughout the season per minute, excluding stoppage time
 print('  ' + str(len(goal_minutes)) + ' goals were scored in PL season ' + season_span + '.')
-print('    ' + str(sum(goal_times_bin_counts[0:44]) + sum(goal_times_bin_counts[45:89])) + ' of them were scored outside of stoppage time.')
+print('    {:0.1f} % of them were scored outside of stoppage time.'.format( 100*(sum(goal_times_bin_counts[0:44]) + sum(goal_times_bin_counts[45:89]))/len(goal_minutes) ) )
 print('  on average, {:0.2f} goals were scored per combined game minute, excluding stoppage time.'.format(avg_goals_per_minute)) #':' introduces format spec, 0 enables sign-aware zero-padding for numeric types, .2 sets the precision to 2 decimal places, and f displays the number as a fixed-point number
 
 ##### use a chi-square goodness of fit test to determine if goals are scored uniformly throught matches #####
@@ -52,7 +52,7 @@ X_square_statistic, X_square_p_value = stats.chisquare(goals_per_min_no_stoppage
 if X_square_p_value < X_square_alpha:
     print('  Goals did NOT occur with equal probability throughout these matches.')
 else:
-    print('  Goals occurred with equal probability throughout these matches.')
+    print('  Goals DID occur with equal probability throughout these matches.')
 print('    Chi-square p-value = {:0.3f}'.format(X_square_p_value))
 #X_square_val=sum( [( (count-avg_goals_per_minute)**2 )/avg_goals_per_minute for count in goal_times_bin_counts[0:44]] ) + sum( [( (count-avg_goals_per_minute)**2 )/avg_goals_per_minute for count in goal_times_bin_counts[45:89]] )
 #X_square_deg_free=len(goal_times_bin_counts[0:44]) + len(goal_times_bin_counts[45:89]) - 1
@@ -73,13 +73,13 @@ vic_marg_bin_settings = range(0,12)
 vic_marg_bin_settings = [edge - 0.5 for edge in vic_marg_bin_settings ] #slide the edges back by 0.5 so that bins are centered on integer values
 if max(victory_margin) > 10:
     print('WARNING: default bin range was insufficient, so it was adjusted')
-    vic_marg_bin_settings = range(0,max(victory_margin)+2)
+    vic_marg_bin_settings = range(0, max(victory_margin)+2)
     vic_marg_bin_settings = [edge - 0.5 for edge in vic_marg_bin_settings ] #slide the edges back by 0.5 so that bins are centered on integer values
 victory_margin_games_with_winner = [x for x in victory_margin if x > 0]
 avg_victory_margin_per_match = sum(victory_margin_games_with_winner)/len(victory_margin_games_with_winner)
 avg_goal_difference_per_match = sum(victory_margin)/len(victory_margin)
-print('  on average, the margin of victory was {:0.2f} goals for matches with a victor this season.'.format(avg_victory_margin_per_match))
-
+print( '  on average, the margin of victory was {:0.2f} goals for matches with a victor.'.format(avg_victory_margin_per_match) )
+print( '    {:0.1f} % of matches were won.'.format( 100*len(victory_margin_games_with_winner)/380 ) )
 ##### fit a Poisson probability mass function to the binned data #####
 #define the probability mass function
 def Poisson_pmf(lam, k): #lambda is the mean value of occurrences per time interval, k is the number of occurrences per time interval
@@ -88,6 +88,28 @@ def Poisson_pmf(lam, k): #lambda is the mean value of occurrences per time inter
 #make some realistic k values and calculate the pmf at those k values, then multiply by the total number of matches this season
 Poisson_pmf_goals_per_match_df = pd.DataFrame( {'k values':np.arange(11)} )
 Poisson_pmf_goals_per_match_df['Poisson counts'] = Poisson_pmf_goals_per_match_df.apply(lambda row: Poisson_pmf(avg_goals_per_match, row['k values']), axis=1) * len(match_results_df)
+
+##### is home field advantage real? #####
+home_goal_diff_bin_settings = range(-10,12)
+home_goal_diff_bin_settings = [edge - 0.5 for edge in home_goal_diff_bin_settings ] #slide the edges back by 0.5 so that bins are centered on integer values
+#print(home_goal_diff_bin_settings)
+home_team_goal_difference = match_results_df['home final score'] -  match_results_df['away final score'] #new data series
+home_team_won = home_team_goal_difference[ home_team_goal_difference > 0 ] #only matches where the home team won
+#print( (home_team_goal_difference > 0).sum() )
+home_team_drew = home_team_goal_difference[ home_team_goal_difference == 0 ] #only matches where the home team drew
+#print( (home_team_goal_difference == 0).sum() )
+home_team_lost = home_team_goal_difference[ home_team_goal_difference < 0 ] #only matches where the home team lost
+#print( (home_team_goal_difference < 0).sum() )
+print( '      the home team won {:0.1f} % of matches.'.format(100*(home_team_goal_difference > 0).sum()/380) )
+print( '      the away team won {:0.1f} % of matches.'.format(100*(home_team_goal_difference < 0).sum()/380) )
+print( '      {:0.1f} % of matches ended in a draw.'.format(100*(home_team_goal_difference == 0).sum()/380) )
+
+X_square_alpha = 0.05 #we will reject the null hypothesis that the home and away teams are equally likely to win if the X squared p-value is less than this
+X_square_statistic, X_square_p_value = stats.chisquare( [(home_team_goal_difference > 0).sum(), (home_team_goal_difference < 0).sum()] )
+if X_square_p_value < X_square_alpha:
+    print('  The home and away teams are NOT equally likely to win the match.')
+else:
+    print('  The home and away teams ARE equally likely to win the match.')
 
 ##### plot the results of your goal times analysis #####
 fig_01 = plt.figure(figsize=(5, 5))
@@ -116,10 +138,10 @@ axes_01[1].hist([x for x in goal_minutes if x == 45 or x == 90], density=False, 
 
 fig_01.tight_layout()
 
-if save_fig: #save the figure if you like
+if save_figs: #save the figure if you like
     figure_01_name = season_span + '_PL_goal_times.pdf'
     plt.savefig(figure_01_name, dpi=150, format=None, transparent=True) #facecolor='w', edgecolor='w')
-    print('Saved figure.')
+    print('Saved figure ' + figure_01_name)
 
 ##### plot the results of your goals scored per match analysis #####
 fig_02 = plt.figure(figsize=(5, 5))
@@ -139,10 +161,10 @@ axes_02[0].plot(Poisson_pmf_goals_per_match_df['k values'], Poisson_pmf_goals_pe
 
 fig_02.tight_layout()
 
-if save_fig: #save the figure if you like
+if save_figs: #save the figure if you like
     figure_02_name = season_span + '_PL_goals_per_match.pdf'
     plt.savefig(figure_02_name, dpi=150, format=None, transparent=True) #facecolor='w', edgecolor='w')
-    print('Saved figure.')
+    print('Saved figure ' + figure_02_name)
 
 ##### plot the results of your goal difference analysis #####
 fig_03 = plt.figure(figsize=(5, 5))
@@ -162,10 +184,34 @@ axes_03[0].hist(victory_margin, density=False, bins=vic_marg_bin_settings, color
 
 fig_03.tight_layout()
 
-if save_fig: #save the figure if you like
+if save_figs: #save the figure if you like
     figure_03_name = season_span + '_PL_goal_difference_per_match.pdf'
     plt.savefig(figure_03_name, dpi=150, format=None, transparent=True) #facecolor='w', edgecolor='w')
-    print('Saved figure.')
+    print('Saved figure ' + figure_03_name)
+
+##### plot the home team vs away team your goals scored #####
+fig_04 = plt.figure(figsize=(5, 5))
+fig_04.suptitle('Season: ' + season_span)
+grid_04 = plt.GridSpec(3, 3)
+axes_04 = []
+axes_04.append( fig_04.add_subplot(grid_04[:, :]) )
+
+axes_04[0].set_title('home team goal difference per match')
+axes_04[0].set_xlabel('home team goal difference', fontsize=14, color='black')
+axes_04[0].set_ylabel('matches', fontsize=14, color='black')
+axes_04[0].set_xlim(-10.5, 10.5)
+axes_04[0].set_ylim(0, 100)
+axes_04[0].plot([home_team_goal_difference.mean(), home_team_goal_difference.mean()], [0,380], linewidth=2.0, linestyle='--', color='gray') #plot a line showing the average goal difference for the home team in a match
+axes_04[0].hist(home_team_drew, density=False, bins=home_goal_diff_bin_settings, color=(0.37,0.73,0.49))  #`density=True` makes probabilities, `density=False` uses raw counts
+axes_04[0].hist(home_team_won, density=False, bins=home_goal_diff_bin_settings, color=(0.07,0.41,0.98))  #`density=True` makes probabilities, `density=False` uses raw counts
+axes_04[0].hist(home_team_lost, density=False, bins=home_goal_diff_bin_settings, color=(0.69,0.23,0.56))  #`density=True` makes probabilities, `density=False` uses raw counts
+
+fig_04.tight_layout()
+
+if save_figs: #save the figure if you like
+    figure_04_name = season_span + '_PL_home_team_goal_difference_per_match.pdf'
+    plt.savefig(figure_04_name, dpi=150, format=None, transparent=True) #facecolor='w', edgecolor='w')
+    print('Saved figure ' + figure_04_name)
 
 plt.show() #show the figure
 
