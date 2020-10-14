@@ -1,5 +1,5 @@
 # What can we learn about the beautiful game from data?
-Soccer (football) is the most-watched sport on the planet. It is an exciting game, played the world over, contested by determined competitors, celebrated by passionate fans, and producing moments of sheer brilliance that are remebered for generations. Here, I will provide quantitative insight into this beloved sport by applying data analytics to the *English Premier League* (EPL).
+Soccer (football) is the most-watched sport on the planet. It is an exciting game, played the world over, contested by determined competitors, celebrated by passionate fans, and producing moments of sheer brilliance that are remembered for generations. Here, I will provide quantitative insight into this beloved sport by applying data analytics to the *English Premier League* (EPL).
 
 #### Data source and structure
 The raw data has been compiled from [www.worldfootball.net](www.worldfootball.net) and stored in CSV files. Each CSV file contains the scores from all matches in a single EPL season.
