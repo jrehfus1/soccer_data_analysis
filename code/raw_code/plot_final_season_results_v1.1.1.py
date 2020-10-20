@@ -1,6 +1,6 @@
 ################################################################################
 #author: JER
-#date of last modification: 201023
+#date of last modification: 200923
 #summary of last modification: wrote initial program
 
 ################################################################################

@@ -36,24 +36,52 @@ match_results_df = pd.read_csv(in_path+in_file)
 
 ################################################################################
 ##### compile the times at which goals were scored this season #####
-home_goal_minutes = [] #make a list containing the times at which goals were scored
-away_goal_minutes = [] #make a list containing the times at which goals were scored
+home_goal_minutes = [] #make a list containing the times at which goals were scored by the home team this season
+away_goal_minutes = [] #make a list containing the times at which goals were scored by the away team this season
+winning_goal_minutes = [] #make a list containing the times at which tieing goals were scored
+winning_goal_minutes = [] #make a list containing the times at which winning goals were scored
 for index, row in match_results_df.iterrows():
+
+    tie_test = False
+    home_team_won = False
+    away_team_won = False
+    game_goal_difference = row['home final score'] - row['away final score']
+    if game_goal_difference == 0:
+        tie_test = True
+    else:
+        if game_goal_difference > 0:
+            home_team_won = True
+        else:
+            away_team_won = True
+
+    curr_game_home_goal_minutes = [] #keep track of the times at which goals were scored by the home team
+    curr_game_away_goal_minutes = [] #keep track of the times at which goals were scored by the away team
     if row['home final score'] > 0: #a goal was scored by the home team
         goal_times = row['home goal times'][1:-1].split(',')
         for minute in goal_times:
-            home_goal_minutes.append(int(minute.strip()[1:-1]))
+            curr_game_home_goal_minutes.append(int(minute.strip()[1:-1]))
     if row['away final score'] > 0: #a goal was scored by the away team
         goal_times = row['away goal times'][1:-1].split(',')
         for minute in goal_times:
-            away_goal_minutes.append(int(minute.strip()[1:-1]))
+            curr_game_away_goal_minutes.append(int(minute.strip()[1:-1]))
+
+    #get the tieing or winning goal times in all games in which goals were scored
+    if tie_test and row['home final score'] > 0: #there was a tie and goals were scored
+        winning_goal_minutes.append( max(curr_game_home_goal_minutes + curr_game_away_goal_minutes)  ) #the last goal scored was the tieing one
+    elif home_team_won:
+        winning_goal_minutes.append( curr_game_home_goal_minutes[ -game_goal_difference ] ) #this is the goal that sealed victory for the home team
+    elif away_team_won:
+        winning_goal_minutes.append( curr_game_away_goal_minutes[ game_goal_difference ] ) #this is the goal that sealed victory for the away team
+
+    home_goal_minutes = home_goal_minutes + curr_game_home_goal_minutes #record the goal minutes for the home team
+    away_goal_minutes = away_goal_minutes + curr_game_away_goal_minutes #record the goal minutes for the away team
 
 ################################################################################
 ##### bin the goal times data for each match this season #####
 goal_minutes = home_goal_minutes + away_goal_minutes
 
-goal_times_bin_settings = range(1,92) #use one minute bins
-goal_times_bin_settings = list( range(1,46,2)  ) + list( range(46,91,2) ) + [91] #use two minute bins for normal time, one minute for stoppage time
+#goal_times_bin_settings = range(1,92) #use one minute bins
+#goal_times_bin_settings = list( range(1,46,2)  ) + list( range(46,91,2) ) + [91] #use two minute bins for normal time, one minute for stoppage time
 goal_times_bin_settings = list( range(1,46,4)  ) + list( range(46,91,4) ) + [91] #use for minute bins for normal time, one minute for stoppage time
 #print( goal_times_bin_settings )
 
@@ -68,6 +96,10 @@ avg_goals_per_minute = ( sum(first_half_rt_goal_bin_counts) + sum(second_half_rt
 print('  ' + str(len(goal_minutes)) + ' goals were scored in PL season ' + season_span + '.')
 print('    {:0.1f} % of them were scored outside of stoppage time.'.format( 100 * ( sum(first_half_rt_goal_bin_counts) + sum(second_half_rt_goal_bin_counts) ) / sum(goal_times_bin_counts) ) )
 print('  on average, {:0.2f} goals were scored per combined game minute, excluding stoppage time.'.format(avg_goals_per_minute)) #':' introduces format spec, 0 enables sign-aware zero-padding for numeric types, .2 sets the precision to 2 decimal places, and f displays the number as a fixed-point number
+
+################################################################################
+##### bin the winning goal times data for each match this season #####
+[winning_goal_minutes_bin_counts, winning_goal_minutes_bin_edges] = np.histogram(winning_goal_minutes, bins=goal_times_bin_settings)
 
 ################################################################################
 ##### use a chi-square goodness of fit test to determine if goals are scored uniformly throught matches #####
@@ -140,7 +172,6 @@ if save_figs: #save the figure if you like
     plt.savefig(out_path_figs + figure_01_name, dpi=150, format=None, transparent=True) #facecolor='w', edgecolor='w')
     print('Saved figure ' + figure_01_name)
 
-'''
 ################################################################################
 ##### analyze the total number of goals scored in each match #####
 total_goals_in_match = match_results_df['home final score'] +  match_results_df['away final score'] #new data series with total number of goals scored for each match
@@ -271,7 +302,22 @@ if save_figs: #save the figure if you like
     figure_04_name = season_span + '_PL_home_team_goal_difference_per_match.pdf'
     plt.savefig(out_path_figs + figure_04_name, dpi=150, format=None, transparent=True) #facecolor='w', edgecolor='w')
     print('Saved figure ' + figure_04_name)
-'''
+
+################################################################################
+##### plot the results of the winning goal times analysis #####
+fig_05 = plt.figure(figsize=(5,5))
+fig_05.suptitle('Season: ' + season_span)
+grid_05 = plt.GridSpec(3, 3)
+axes_05 = []
+axes_05.append( fig_05.add_subplot(grid_05[:, :]) )
+
+axes_05[0].set_title('title')
+axes_05[0].set_xlabel('minute', fontsize=14, color='black')
+axes_05[0].set_ylabel('minute', fontsize=14, color='black')
+axes_05[0].set_xlim(1, 91)
+axes_05[0].set_ylim(0, 100)
+axes_05[0].hist(winning_goal_minutes, density=False, bins=goal_times_bin_settings, color=(0.37,0.73,0.49))
+
 ################################################################################
 ##### show the figures #####
 plt.show()
